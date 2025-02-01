@@ -1,0 +1,89 @@
+.message-right {
+    text-align: right;
+    background-color: #DCF8C6;
+    margin: 5px 0 5px auto;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.message-left {
+    text-align: left;
+    background-color: #FFF;
+    margin: 5px auto 5px 0;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+.chat-container {
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 320px;
+    padding: 20px;
+}
+h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #555;
+}
+#receiver-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+#receiver-list li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    background: #f9f9f9;
+}
+#receiver-list li:hover {
+    background: #e9ecef;
+}
+textarea {
+    resize: none;
+    height: 50px;
+}
+button {
+    background: #007bff;
+    color: #fff;
+    margin-top: 3vh;
+    margin-left: 1vw;
+}
+button:hover {
+    background: #0056b3;
+}
+.userlist{
+    height: 100%;
+    width: 27%;
+    margin-right: 2vw;
+}
+.chatArea{
+    width: 85vw;
+    margin-right: 10%;
+    height: 90vh;
+}
+
+#chat-box{
+    height: 90vh;
+    background-color: rgb(122, 118, 118);
+}
+textarea{
+    margin-top: 1vh;
+    height: fit-content;
+    min-height: 5vh;
+    width: 85%;
+}
+.textAndsend{
+    display: flex;
+}

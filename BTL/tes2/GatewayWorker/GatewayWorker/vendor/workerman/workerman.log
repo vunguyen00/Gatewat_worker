@@ -1,0 +1,106 @@
+2025-01-15 05:29:18 pid:1 Error: Call to a member function prepare() on null in D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\Events.php:58
+Stack trace:
+#0 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\Events.php(38): Events::handleRegister('7f0000010b54000...', Array)
+#1 [internal function]: Events::onMessage('7f0000010b54000...', '{"action":"regi...')
+#2 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(385): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"action":"regi...')
+#3 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Connection\TcpConnection.php(646): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Events\Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#5 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(1479): Workerman\Events\Select->loop()
+#6 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(1399): Workerman\Worker::forkWorkersForWindows()
+#7 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#8 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\start_businessworker.php(35): Workerman\Worker::runAll()
+#9 {main}
+2025-01-15 05:29:19 pid:1 Error: Call to a member function prepare() on null in D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\Events.php:58
+Stack trace:
+#0 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\Events.php(38): Events::handleRegister('7f0000010b54000...', Array)
+#1 [internal function]: Events::onMessage('7f0000010b54000...', '{"action":"regi...')
+#2 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(385): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"action":"regi...')
+#3 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Connection\TcpConnection.php(646): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Events\Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#5 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(1479): Workerman\Events\Select->loop()
+#6 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(1399): Workerman\Worker::forkWorkersForWindows()
+#7 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#8 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\start_businessworker.php(35): Workerman\Worker::runAll()
+#9 {main}
+2025-01-15 05:29:20 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2025-01-15 05:29:20 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2025-01-15 05:34:02 pid:1 Error: Call to a member function prepare() on null in D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\Events.php:58
+Stack trace:
+#0 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\Events.php(38): Events::handleRegister('7f0000010b54000...', Array)
+#1 [internal function]: Events::onMessage('7f0000010b54000...', '{"action":"regi...')
+#2 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(385): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"action":"regi...')
+#3 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Connection\TcpConnection.php(646): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Events\Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#5 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(1479): Workerman\Events\Select->loop()
+#6 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(1399): Workerman\Worker::forkWorkersForWindows()
+#7 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#8 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\start_businessworker.php(35): Workerman\Worker::runAll()
+#9 {main}
+2025-01-15 05:34:12 pid:1 Error: Call to a member function prepare() on null in D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\Events.php:58
+Stack trace:
+#0 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\Events.php(38): Events::handleRegister('7f0000010b54000...', Array)
+#1 [internal function]: Events::onMessage('7f0000010b54000...', '{"action":"regi...')
+#2 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(385): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"action":"regi...')
+#3 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Connection\TcpConnection.php(646): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Events\Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#5 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(1479): Workerman\Events\Select->loop()
+#6 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(1399): Workerman\Worker::forkWorkersForWindows()
+#7 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#8 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\start_businessworker.php(35): Workerman\Worker::runAll()
+#9 {main}
+2025-01-15 05:34:13 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2025-01-15 05:34:13 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2025-01-15 05:34:14 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2025-01-15 05:34:14 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2025-01-15 05:34:15 pid:1 Error: Call to a member function prepare() on null in D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\Events.php:58
+Stack trace:
+#0 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\Events.php(38): Events::handleRegister('7f0000010b54000...', Array)
+#1 [internal function]: Events::onMessage('7f0000010b54000...', '{"action":"regi...')
+#2 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(385): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"action":"regi...')
+#3 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Connection\TcpConnection.php(646): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Events\Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#5 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(1479): Workerman\Events\Select->loop()
+#6 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(1399): Workerman\Worker::forkWorkersForWindows()
+#7 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#8 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\start_businessworker.php(35): Workerman\Worker::runAll()
+#9 {main}
+2025-01-15 05:34:16 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2025-01-15 05:34:16 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2025-01-15 05:39:14 pid:1 Error: Call to a member function prepare() on null in D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\Events.php:58
+Stack trace:
+#0 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\Events.php(38): Events::handleRegister('7f0000010b54000...', Array)
+#1 [internal function]: Events::onMessage('7f0000010b54000...', '{"action":"regi...')
+#2 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(385): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"action":"regi...')
+#3 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Connection\TcpConnection.php(646): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Events\Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#5 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(1479): Workerman\Events\Select->loop()
+#6 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(1399): Workerman\Worker::forkWorkersForWindows()
+#7 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#8 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\start_businessworker.php(35): Workerman\Worker::runAll()
+#9 {main}
+2025-01-15 05:39:15 pid:1 Error: Call to a member function prepare() on null in D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\Events.php:58
+Stack trace:
+#0 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\Events.php(38): Events::handleRegister('7f0000010b54000...', Array)
+#1 [internal function]: Events::onMessage('7f0000010b54000...', '{"action":"regi...')
+#2 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(385): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"action":"regi...')
+#3 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Connection\TcpConnection.php(646): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Events\Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#5 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(1479): Workerman\Events\Select->loop()
+#6 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(1399): Workerman\Worker::forkWorkersForWindows()
+#7 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#8 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\start_businessworker.php(35): Workerman\Worker::runAll()
+#9 {main}
+2025-01-15 05:39:16 pid:1 Error: Call to a member function prepare() on null in D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\Events.php:58
+Stack trace:
+#0 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\Events.php(38): Events::handleRegister('7f0000010b54000...', Array)
+#1 [internal function]: Events::onMessage('7f0000010b54000...', '{"action":"regi...')
+#2 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(385): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"action":"regi...')
+#3 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Connection\TcpConnection.php(646): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Events\Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#5 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(1479): Workerman\Events\Select->loop()
+#6 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(1399): Workerman\Worker::forkWorkersForWindows()
+#7 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#8 D:\UDPT\BTL\tes2\GatewayWorker\GatewayWorker\Applications\YourApp\start_businessworker.php(35): Workerman\Worker::runAll()
+#9 {main}
+2025-01-15 05:39:17 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
+2025-01-15 05:39:17 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://doc2.workerman.net/send-buffer-to-worker-fail.html
