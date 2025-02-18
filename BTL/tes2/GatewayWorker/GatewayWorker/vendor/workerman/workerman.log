@@ -165,3 +165,9 @@ Stack trace:
 2025-02-14 03:04:05 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
 2025-02-14 03:04:06 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
 2025-02-14 03:04:07 pid:1 Gateway: Worker->name conflict. Key:127.0.0.1:YourAppBusinessWorker:0
+2025-02-17 06:14:01 pid:1 Bad request for Register service. Request info(IP:127.0.0.1, Request Buffer:sang). See http://doc2.workerman.net/register-auth-timeout.html
+2025-02-17 08:12:51 pid:1 Bad request for Register service. Request info(IP:127.0.0.1, Request Buffer:GET / HTTP/1.1). See http://doc2.workerman.net/register-auth-timeout.html
+2025-02-17 08:12:52 pid:1 Bad request for Register service. Request info(IP:127.0.0.1, Request Buffer:GET / HTTP/1.1). See http://doc2.workerman.net/register-auth-timeout.html
+2025-02-17 08:12:54 pid:1 Bad request for Register service. Request info(IP:127.0.0.1, Request Buffer:GET / HTTP/1.1). See http://doc2.workerman.net/register-auth-timeout.html
+2025-02-17 08:12:59 pid:1 Bad request for Register service. Request info(IP:127.0.0.1, Request Buffer:GET / HTTP/1.1). See http://doc2.workerman.net/register-auth-timeout.html
+2025-02-17 08:20:42 pid:1 Worker process terminated
