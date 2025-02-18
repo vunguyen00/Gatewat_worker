@@ -9,6 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 include __DIR__ . '/../config.php';
 
 $currentUserId = $_SESSION['user_id'];
+$users = []; // Khởi tạo mảng để tránh lỗi
 
 try {
     $stmt = $pdo->query("SELECT id, username FROM users");
@@ -16,6 +17,7 @@ try {
 } catch (PDOException $e) {
     die("Lỗi kết nối CSDL: " . $e->getMessage());
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -25,27 +27,35 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
     <link rel="stylesheet" href="../css/chat.css">
-    <style>
-
-    </style>
 </head>
 <body>
+    <div class="header">
+        <h2>Ứng dụng Chat</h2>
+        <button onclick="handleLogout()">Đăng xuất</button>
+    </div>
+
     <div class="userlist">
         <ul id="receiver-list">
-            <?php foreach ($users as $user): ?>
-                <li onclick="onReceiverSelect(<?= $user['id']; ?>)">
-                    <?= htmlspecialchars($user['username']); ?>
-                </li>
-            <?php endforeach; ?>
+            <?php if (!empty($users)): ?>
+                <?php foreach ($users as $user): ?>
+                    <li onclick="onReceiverSelect(<?= $user['id']; ?>)">
+                        <?= htmlspecialchars($user['username']); ?>
+                    </li>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <li>Không có người dùng nào.</li>
+            <?php endif; ?>
         </ul>
     </div>
+
     <div class="chatArea">
         <div id="chat-box"></div>
         <div class="textAndsend">
-                <textarea id="message-content" placeholder="Nhập tin nhắn..."></textarea>
-                <button onclick="handleSendMessage(event)">Gửi</button>
+            <textarea id="message-content" placeholder="Nhập tin nhắn..."></textarea>
+            <button onclick="handleSendMessage(event)">Gửi</button>
         </div>
     </div>
+
     <script>
         const currentUserId = <?= json_encode($currentUserId) ?>;
         let selectedReceiver = null;
@@ -100,35 +110,37 @@ try {
         }
 
         function appendNewMessage(msg) {
-    // Xác định nhãn hiển thị: nếu tin nhắn do bạn gửi thì hiển thị "Bạn", còn nếu không thì hiển thị tên người gửi
-    const senderLabel = (msg.sender == currentUserId) ? 'Bạn' : msg.sender_username;
-    
-    // Tạo phần tử div để chứa tin nhắn
-    const messageElement = document.createElement('div');
-    
-    // Thêm CSS cho tin nhắn: căn phải nếu bạn gửi, căn trái nếu người khác gửi
-    if (msg.sender == currentUserId) {
-        messageElement.style.textAlign = 'right';
-        messageElement.style.backgroundColor = '#DCF8C6'; // Ví dụ: màu nền xanh nhạt cho tin nhắn của bạn
-        messageElement.style.margin = '5px 0 5px auto';  // Lệch sang bên phải
-        messageElement.style.padding = '8px';
-        messageElement.style.borderRadius = '8px';
-    } else {
-        messageElement.style.textAlign = 'left';
-        messageElement.style.backgroundColor = '#FFF';
-        messageElement.style.margin = '5px auto 5px 0';  // Lệch sang bên trái
-        messageElement.style.padding = '8px';
-        messageElement.style.borderRadius = '8px';
-    }
-    
-    // Nội dung tin nhắn
-    messageElement.innerHTML = `<strong>${senderLabel}:</strong> ${msg.message}`;
-    
-    // Thêm tin nhắn vào khung chat và cuộn xuống cuối
-    chatBox.appendChild(messageElement);
-    chatBox.scrollTop = chatBox.scrollHeight;
-}
+            const senderLabel = (msg.sender == currentUserId) ? 'Bạn' : msg.sender_username;
+            const messageElement = document.createElement('div');
 
+            if (msg.sender == currentUserId) {
+                messageElement.style.textAlign = 'right';
+                messageElement.style.backgroundColor = '#DCF8C6'; 
+                messageElement.style.margin = '5px 0 5px auto';  
+                messageElement.style.padding = '8px';
+                messageElement.style.borderRadius = '8px';
+            } else {
+                messageElement.style.textAlign = 'left';
+                messageElement.style.backgroundColor = '#FFF';
+                messageElement.style.margin = '5px auto 5px 0';  
+                messageElement.style.padding = '8px';
+                messageElement.style.borderRadius = '8px';
+            }
+
+            messageElement.innerHTML = `<strong>${senderLabel}:</strong> ${msg.message}`;
+            chatBox.appendChild(messageElement);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function handleLogout() {
+            fetch('logout.php', { method: 'POST' })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.href = 'login.php'; // Chuyển hướng về trang đăng nhập
+                    }
+                })
+                .catch(error => console.error('Lỗi khi đăng xuất:', error));
+        }
 
         setInterval(fetchMessages, 500); // Cập nhật tin nhắn mỗi giây
     </script>
